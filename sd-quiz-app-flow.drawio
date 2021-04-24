@@ -1,1 +1,45 @@
-<mxfile host="app.diagrams.net" modified="2021-04-24T17:37:20.558Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" version="14.6.6" etag="Hhs1cXYc7elsyo3Mukmj" type="github"><diagram id="F2Fc7CSwbD47U2lCkI4H">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-04-24T17:43:05.666Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="CZ6LjF-mu3TJdoj-_0Dl" version="14.6.6" type="github">
+  <diagram id="F2Fc7CSwbD47U2lCkI4H" name="Page-1">
+    <mxGraphModel dx="1038" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OKv1ZZ9c_iS8QBsWt1NR-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OKv1ZZ9c_iS8QBsWt1NR-1" target="OKv1ZZ9c_iS8QBsWt1NR-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OKv1ZZ9c_iS8QBsWt1NR-1" value="მომხმარებლის სახელი" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OKv1ZZ9c_iS8QBsWt1NR-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OKv1ZZ9c_iS8QBsWt1NR-2" target="OKv1ZZ9c_iS8QBsWt1NR-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OKv1ZZ9c_iS8QBsWt1NR-2" value="კატეგორია" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OKv1ZZ9c_iS8QBsWt1NR-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OKv1ZZ9c_iS8QBsWt1NR-3" target="OKv1ZZ9c_iS8QBsWt1NR-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OKv1ZZ9c_iS8QBsWt1NR-3" value="სირთულე" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="200" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OKv1ZZ9c_iS8QBsWt1NR-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OKv1ZZ9c_iS8QBsWt1NR-6" target="OKv1ZZ9c_iS8QBsWt1NR-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OKv1ZZ9c_iS8QBsWt1NR-6" value="ტესტები" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="280" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="OKv1ZZ9c_iS8QBsWt1NR-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="OKv1ZZ9c_iS8QBsWt1NR-7" target="OKv1ZZ9c_iS8QBsWt1NR-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="560" />
+              <mxPoint x="600" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OKv1ZZ9c_iS8QBsWt1NR-7" value="შედეგი" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="480" width="160" height="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
