@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ResultsRouterModule } from './results-router.module';
+import {ResultsComponent} from './components/results/results.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ ResultsComponent ],
   imports: [
-    CommonModule
+    CommonModule,
+    ResultsRouterModule
   ]
 })
 export class ResultsModule { }

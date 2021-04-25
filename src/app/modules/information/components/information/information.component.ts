@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms';
-import {QuizInformationType} from '../../../../shared/models/quiz-information-type.model';
-import {APIService} from '../../../../core/services/api.service';
-import {Router} from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { QuizInformationType } from '../../../../shared/models/quiz-information-type.model';
+import { APIService } from '../../../../core/services/api.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-information',
@@ -16,7 +16,8 @@ export class InformationComponent implements OnInit {
 
   constructor(
     private apiService: APIService,
-    private router: Router
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   private setDefaults(): void {
@@ -55,7 +56,7 @@ export class InformationComponent implements OnInit {
 
         if (payload) {
           localStorage.setItem('username', this.username);
-          this.router.navigate(['quiz']);
+          this.router.navigate(['/quiz'], { relativeTo: this.activatedRoute });
         } else {
           alert('Network error or empty questions');
         }

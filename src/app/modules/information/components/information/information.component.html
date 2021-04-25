@@ -1,7 +1,7 @@
 <section class="information-container">
   <div class="container">
     <div class="row">
-      <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="mb-3" ngNativeValidate>
+      <form #infoForm="ngForm" (ngSubmit)="onSubmit(infoForm)" class="mb-3" ngNativeValidate>
         <label class="form-label">Enter your name: </label>
 
         <input [(ngModel)]="username" name="username" type="text" class="form-control" autofocus required>

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {QuizInformationType} from '../../shared/models/quiz-information-type.model';
-import {Observable, of, Subject} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import {QuizQuestionsResponse} from '../../shared/interfaces/quiz-questions-response.interface';
 import {HttpClient} from '@angular/common/http';
 import {OPEN_TRIVIA_DB} from '../../config/http';
@@ -12,7 +12,7 @@ import {shuffle} from '../utils/shuffle';
   providedIn: 'root'
 })
 export class APIService {
-  private cachedQuizQuestions: Subject<QuizQuestion[]> = new Subject<QuizQuestion[]>();
+  private cachedQuizQuestions: BehaviorSubject<QuizQuestion[]> = new BehaviorSubject<QuizQuestion[]>(null);
 
   constructor(
     private httpClient: HttpClient
