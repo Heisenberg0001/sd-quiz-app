@@ -24,7 +24,9 @@
            [ngClass]="{ 'border': question.answers[3] === question.userAnswer,
                         'border-danger': question.answers[3] === question.userAnswer }">{{question.answers[3]}}</p>
         <br>
+
       </div>
+      <button type="button" class="btn btn-danger" (click)="tryAgain()">Try Again</button>
     </div>
   </div>
 </section>
