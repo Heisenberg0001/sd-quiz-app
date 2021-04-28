@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { QuizComponent } from './components/quiz/quiz.component';
 
 const routes: Routes = [
-  { path: '', component: QuizComponent },
-  // { path: 'results',  loadChildren: () => import('../results/results.module').then(m => m.ResultsModule) }
+  { path: '', component: QuizComponent }
 ];
 
 @NgModule({

@@ -1,18 +1,20 @@
-import {Injectable} from '@angular/core';
-import {QuizInformationType} from '../../shared/models/quiz-information-type.model';
-import {BehaviorSubject, Observable} from 'rxjs';
-import {QuizQuestionsResponse} from '../../shared/interfaces/quiz-questions-response.interface';
-import {HttpClient} from '@angular/common/http';
-import {OPEN_TRIVIA_DB} from '../../config/http';
-import {map} from 'rxjs/operators';
-import {QuizQuestion} from '../../shared/models/quiz-questions.model';
-import {shuffle} from '../utils/shuffle';
+import { Injectable } from '@angular/core';
+import { QuizInformationType } from '../../shared/models/quiz-information-type.model';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { QuizQuestionsResponse } from '../../shared/interfaces/quiz-questions-response.interface';
+import { HttpClient } from '@angular/common/http';
+import { OPEN_TRIVIA_DB } from '../../config/http';
+import { map } from 'rxjs/operators';
+import { QuizQuestion } from '../../shared/models/quiz-questions.model';
+import { shuffle } from '../utils/shuffle';
 
 @Injectable({
   providedIn: 'root'
 })
 export class APIService {
   private cachedQuizQuestions: BehaviorSubject<QuizQuestion[]> = new BehaviorSubject<QuizQuestion[]>(null);
+  private resultsArr: QuizQuestion[] = [];
+  private score: number = 0;
 
   constructor(
     private httpClient: HttpClient
@@ -55,8 +57,22 @@ export class APIService {
         })
       );
   }
-
   public getQuizQuestions(): Observable<QuizQuestion[]> {
     return this.cachedQuizQuestions;
+  }
+  public setResultArr( value: QuizQuestion ): void {
+    this.resultsArr.push(value);
+  }
+  public getResultArr(): QuizQuestion[] {
+    return this.resultsArr;
+  }
+  public incrementScore(): void {
+      this.score++;
+  }
+  public setScore( value: number ): void {
+    this.score = value;
+  }
+  public getScore(): number {
+    return this.score
   }
 }

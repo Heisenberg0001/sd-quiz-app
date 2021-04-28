@@ -1,0 +1,30 @@
+<section class="results-container">
+  <div class="container">
+    <div class="row mb-4 ">
+      <h2 class="mt-4" [ngStyle]="{'color': '#b33939'}">Your score is: {{this.score}}</h2>
+    </div>
+    <div class="row questions">
+      <div class="col-md-5 me-3 mb-3 border border-4 rounded rounded-3"
+           *ngFor="let question of results"
+           [ngClass]="{ 'border-success': question.isCorrect,
+                        'border-danger': !question.isCorrect}">
+        <p>Question: <br>{{question.question}}</p>
+        <p [ngStyle]="{ 'color': '#ffda79' }">Answers You Chose: </p>
+        <p class="mb-2"
+           [ngClass]="{ 'border': question.answers[0] === question.userAnswer,
+                        'border-danger': question.answers[0] === question.userAnswer }"
+        >{{question.answers[0]}}</p>
+        <p class="mb-2"
+           [ngClass]="{ 'border': question.answers[1] === question.userAnswer,
+                        'border-danger': question.answers[1] === question.userAnswer }">{{question.answers[1]}}</p>
+        <p class="mb-2"
+           [ngClass]="{ 'border': question.answers[2] === question.userAnswer,
+                        'border-danger': question.answers[2] === question.userAnswer }">{{question.answers[2]}}</p>
+        <p class="mb-2"
+           [ngClass]="{ 'border': question.answers[3] === question.userAnswer,
+                        'border-danger': question.answers[3] === question.userAnswer }">{{question.answers[3]}}</p>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>

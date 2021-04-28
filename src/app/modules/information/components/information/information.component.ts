@@ -29,7 +29,6 @@ export class InformationComponent implements OnInit {
     this.quizInformationType.difficulty = 'easy';
     this.quizInformationType.amount = 10;
   }
-
   private checkUser(): void {
     const username = localStorage.getItem('username');
 
@@ -42,7 +41,6 @@ export class InformationComponent implements OnInit {
     this.setDefaults();
     this.checkUser();
   }
-
   public onSubmit(form: NgForm): void {
     if (this.username.trim().length === 0 || !this.canSubmit) {
       return;
@@ -62,5 +60,4 @@ export class InformationComponent implements OnInit {
         }
       });
   }
-
 }

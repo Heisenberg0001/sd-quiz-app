@@ -1,17 +1,25 @@
 <section class="quiz-container">
   <div class="container">
-    <div class="row">
-      <form #quizForm="ngForm" class="mb-3">
-<!--        <p>Question: {{this.quizArr[this.index]}}</p>-->
+    <div class="row min-vh-100 d-flex justify-content-center align-items-center">
+      <form #quizForm="ngForm" (ngSubmit)="nextBtn(quizForm)" class="col-md-6">
+        <p>Question: <br>{{this.question}}</p>
         <p>Choose Answer: </p>
-<!--        <label *ngIf="quizArr" for="first-answer">A</label>-->
-<!--        <input id="first-answer" name="answers" type="checkbox">-->
-<!--        <label *ngIf="quizArr" for="second-answer">B</label>-->
-<!--        <input id="second-answer" name="answers" type="checkbox">-->
-<!--        <label *ngIf="quizArr" for="third-answer">C</label>-->
-<!--        <input id="third-answer" name="answers" type="checkbox">-->
-<!--        <label *ngIf="quizArr" for="forth-answer">D</label>-->
-<!--        <input id="forth-answer" name="answers" type="checkbox">-->
+        <input id="first-answer" name="answers" type="radio" class="me-2" value="{{this.firstAnswer}}" ngModel required>
+        <label for="first-answer">{{this.firstAnswer}}</label>
+        <br>
+        <input id="second-answer" name="answers" type="radio" class="me-2" value="{{this.secondAnswer}}" ngModel required>
+        <label for="second-answer">{{this.secondAnswer}}</label>
+        <br>
+        <input id="third-answer" name="answers" type="radio" class="me-2" value="{{this.thirdAnswer}}" ngModel required>
+        <label for="third-answer">{{this.thirdAnswer}}</label>
+        <br>
+        <input id="forth-answer" name="answers" type="radio" class="me-2" value="{{this.fourthAnswer}}" ngModel required>
+        <label for="forth-answer">{{this.fourthAnswer}}</label>
+        <br>
+        <button type="submit" class="btn btn-danger mt-3" [disabled]="quizForm.invalid">
+          <ng-container *ngIf="index < quizArr.length - 1">Next</ng-container>
+          <ng-container *ngIf="index === quizArr.length - 1">Go to Results</ng-container>
+        </button>
       </form>
     </div>
   </div>

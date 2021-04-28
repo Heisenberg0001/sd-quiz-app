@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Roboto, sans-serif;
+}
+body {
+  width: 100%;
+  height: 1080px;
+}
+label, p{
+  color: #fa983a;
+
+  font-size: x-large;
+  font-style: italic;
+}
+
+input, select {
+  font-style: italic;
+}
