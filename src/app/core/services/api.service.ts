@@ -57,7 +57,7 @@ export class APIService {
         })
       );
   }
-  public getQuizQuestions(): Observable<QuizQuestion[]> {
+  public getQuizQuestions(): BehaviorSubject<QuizQuestion[]> {
     return this.cachedQuizQuestions;
   }
   public setResultArr( value: QuizQuestion ): void {
