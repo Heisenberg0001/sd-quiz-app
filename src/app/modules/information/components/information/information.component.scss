@@ -1,0 +1,98 @@
+@mixin epic-sides() {
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: -5000px;
+    height: 100%;
+    width: 15000px;
+    z-index: -1;
+    @content;
+  }
+}
+.name-row {
+  max-width: 800px;
+  @include epic-sides() {background: inherit;}
+  text-align: center;
+
+  span {
+    position: relative;
+    display: inline-block;
+    margin: 30px 10px;
+  }
+}
+.basic-slide {
+  display: inline-block;
+  width: 200px;
+  height: 52px;
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #333;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 70px;
+  transition: all .3s ease-in-out;
+
+  &::-webkit-input-placeholder {
+    color: #efefef;
+    text-indent: 0;
+    font-weight: 300;
+  }
+
+  + label {
+    font-size: 22px;
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+    background: #3e3e3e;
+    transition: all .3s ease-in-out;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+}
+.basic-slide:focus,
+.basic-slide:active {
+  color: #333;
+  text-indent: 0;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &::-webkit-input-placeholder {
+    color: #aaa;
+  }
+  + label {
+    transform: translateX(-100%);
+
+    box-shadow: -3px 1px 5px 3px #333;
+  }
+}
+h1, h2 {
+  font-family: Sigmar One, sans-serif;
+  color: #333;
+  text-align: center;
+}
+h1 {
+  margin-top: 200px;
+}
+h2 {
+  margin-top: 25px;
+  margin-bottom: 100px;
+}
+.button {
+  margin-top: 80px;
+}
+.form-control:focus {
+  border-color: #333;
+  box-shadow: 0 1px 1px #333 inset, 0 0 8px #333;
+}

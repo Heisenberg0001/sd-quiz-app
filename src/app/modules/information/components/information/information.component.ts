@@ -45,7 +45,6 @@ export class InformationComponent implements OnInit {
     if (this.username.trim().length === 0 || !this.canSubmit) {
       return;
     }
-    debugger;
     this.canSubmit = false;
 
     this.apiService.getQuizQuestionsFromServer(this.quizInformationType)

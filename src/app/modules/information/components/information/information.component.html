@@ -1,11 +1,16 @@
 <section class="information-container">
-  <div class="container">
-    <div class="row min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="container d-flex flex-column">
+    <h1 class="quiz-app-header">Welcome to Quiz Application!</h1>
+    <h2><u>To test your knowledge</u></h2>
+    <div class="row min-vh-90 d-flex justify-content-center align-items-center">
       <form #infoForm="ngForm" (ngSubmit)="onSubmit(infoForm)" class="col-md-6" ngNativeValidate>
-        <label class="form-label">Enter your name: </label>
-        <input [(ngModel)]="username" name="username" type="text" class="form-control mb-4" autofocus required>
-        <label class="form-label">Select quiz category: </label>
-        <select [(ngModel)]="quizInformationType.category" name="trivia_category" class="form-control mb-4">
+        <div class="name-row d-flex justify-content-center">
+          <span >
+            <input class="basic-slide form-control mb-4" [(ngModel)]="username" id="username" name="username" type="text" placeholder="Enter your name" autofocus required><label class="form-label" for="username">Name</label>
+          </span>
+        </div>
+        <label class="form-label" for="trivia_category">Select quiz category: </label>
+        <select [(ngModel)]="quizInformationType.category" id="trivia_category" name="trivia_category" class="form-control mb-4">
           <option value="9">General Knowledge</option>
           <option value="10">Entertainment: Books</option>
           <option value="11">Entertainment: Film</option>
@@ -31,16 +36,18 @@
           <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
           <option value="32">Entertainment: Cartoon &amp; Animations</option>
         </select>
-        <label class="form-label">Select quiz difficulty</label>
-        <select [(ngModel)]="quizInformationType.difficulty" name="trivia_difficulty" class="form-control mb-4">
+        <label class="form-label" for="trivia_difficulty">Select quiz difficulty: </label>
+        <select [(ngModel)]="quizInformationType.difficulty" id="trivia_difficulty" name="trivia_difficulty" class="form-control mb-4">
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
           <option value="hard">Hard</option>
         </select>
-        <button [disabled]="!canSubmit" type="submit" class="btn btn-danger mb-3">
-          <ng-container *ngIf="canSubmit">Start Quiz!</ng-container>
-          <ng-container *ngIf="!canSubmit">Please Wait</ng-container>
-        </button>
+        <div class="button d-flex justify-content-center">
+          <button [disabled]="!canSubmit" type="submit" class="btn btn-danger mb-3">
+            <ng-container *ngIf="canSubmit">Start Quiz!</ng-container>
+            <ng-container *ngIf="!canSubmit">Please Wait</ng-container>
+          </button>
+        </div>
       </form>
     </div>
   </div>

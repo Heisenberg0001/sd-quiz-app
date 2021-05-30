@@ -3,13 +3,13 @@
     <div class="row mb-4 ">
       <h2 class="mt-4" [ngStyle]="{'color': '#b33939'}">Your score is: {{this.score}}</h2>
     </div>
-    <div class="row questions">
-      <div class="col-md-5 me-3 mb-3 border border-4 rounded rounded-3"
+    <ul class="row questions d-flex flex-row flex-wrap justify-content-center">
+      <li class="col-md-5 me-3 mb-3 border border-4 rounded rounded-3"
            *ngFor="let question of results"
            [ngClass]="{ 'border-success': question.isCorrect,
                         'border-danger': !question.isCorrect}">
-        <p>Question: <br>{{question.question}}</p>
-        <p [ngStyle]="{ 'color': '#ffda79' }">Answers You Chose: </p>
+        <p class="question">Question: <br>{{question.question}}</p>
+        <p [ngStyle]="{ 'color': '#b33939' }">Answers You Chose: </p>
         <p class="mb-2"
            [ngClass]="{ 'border': question.answers[0] === question.userAnswer,
                         'border-danger': question.answers[0] === question.userAnswer }"
@@ -24,8 +24,9 @@
            [ngClass]="{ 'border': question.answers[3] === question.userAnswer,
                         'border-danger': question.answers[3] === question.userAnswer }">{{question.answers[3]}}</p>
         <br>
-
-      </div>
+      </li>
+    </ul>
+    <div class="button d-flex justify-content-center">
       <button type="button" class="btn btn-danger" (click)="tryAgain()">Try Again</button>
     </div>
   </div>

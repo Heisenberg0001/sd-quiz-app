@@ -1,25 +1,45 @@
 <section class="quiz-container">
   <div class="container">
     <div class="row min-vh-100 d-flex justify-content-center align-items-center">
-      <form #quizForm="ngForm" (ngSubmit)="nextBtn(quizForm)" class="col-md-6">
-        <p>Question: <br>{{this.question}}</p>
-        <p>Choose Answer: </p>
-        <input id="first-answer" name="answers" type="radio" class="me-2" value="{{this.firstAnswer}}" ngModel required>
-        <label for="first-answer">{{this.firstAnswer}}</label>
-        <br>
-        <input id="second-answer" name="answers" type="radio" class="me-2" value="{{this.secondAnswer}}" ngModel required>
-        <label for="second-answer">{{this.secondAnswer}}</label>
-        <br>
-        <input id="third-answer" name="answers" type="radio" class="me-2" value="{{this.thirdAnswer}}" ngModel required>
-        <label for="third-answer">{{this.thirdAnswer}}</label>
-        <br>
-        <input id="forth-answer" name="answers" type="radio" class="me-2" value="{{this.fourthAnswer}}" ngModel required>
-        <label for="forth-answer">{{this.fourthAnswer}}</label>
-        <br>
-        <button type="submit" class="btn btn-danger mt-3" [disabled]="quizForm.invalid">
-          <ng-container *ngIf="index < quizArr.length - 1">Next</ng-container>
-          <ng-container *ngIf="index === quizArr.length - 1">Go to Results</ng-container>
-        </button>
+      <form #quizForm="ngForm" (ngSubmit)="nextBtn(quizForm)" class="col-md-5 d-flex flex-column wrapper">
+        <p class="question-title">Question: <br>{{this.question}}</p>
+        <p class="answers-title">Choose Answer: </p>
+        <ul class="box">
+          <li>
+            <input id="first-answer" name="answers" type="radio" class="me-2" value="{{this.firstAnswer}}" ngModel required>
+            <label for="first-answer" class="first-answer">
+              <div class="dot"></div>
+              <div class="text">{{this.firstAnswer}}</div>
+            </label>
+          </li>
+          <li>
+            <input id="second-answer" name="answers" type="radio" class="me-2" value="{{this.secondAnswer}}" ngModel required>
+            <label for="second-answer" class="second-answer">
+              <div class="dot"></div>
+              <div class="text">{{this.secondAnswer}}</div>
+            </label>
+          </li>
+          <li>
+            <input id="third-answer" name="answers" type="radio" class="me-2" value="{{this.thirdAnswer}}" ngModel required>
+            <label for="third-answer" class="third-answer">
+              <div class="dot"></div>
+              <div class="text">{{this.thirdAnswer}}</div>
+            </label>
+          </li>
+          <li>
+            <input id="forth-answer" name="answers" type="radio" class="me-2" value="{{this.fourthAnswer}}" ngModel required>
+            <label for="forth-answer" class="forth-answer">
+              <div class="dot"></div>
+              <div class="text">{{this.fourthAnswer}}</div>
+            </label>
+          </li>
+        </ul>
+        <div class="button d-flex justify-content-center">
+          <button type="submit" class="btn btn-danger mt-3" [disabled]="quizForm.invalid">
+            <ng-container *ngIf="index < quizArr.length - 1">Next</ng-container>
+            <ng-container *ngIf="index === quizArr.length - 1">Go to Results</ng-container>
+          </button>
+        </div>
       </form>
     </div>
   </div>

@@ -1,3 +1,16 @@
-
-
-
+.question {
+  background: #333;
+  color: #fff;
+  border-radius: 10px;
+}
+.border-success {
+  border: 1px !important;
+  box-shadow: 5px 5px 30px #187862;
+}
+.border-danger {
+  border: 1px !important;
+  box-shadow: 5px 5px 30px #b33939;
+}
+button {
+  font-size: 23px;
+}
